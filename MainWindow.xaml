@@ -1,0 +1,35 @@
+﻿<Window x:Class="ChangeBitRate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChangeBitRate"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5,0,5,3"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnInFile" Grid.Column="0" Grid.Row="1" Click="btnInFile_Click">Source File</Button>
+        <TextBox x:Name="tbInFile" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="\\vmware-host\Shared Folders\Downloads\mcm9999_2022_07_10_03.xml" VerticalAlignment="Bottom" MinWidth="200"/>
+        <Button x:Name="btnOutFile" Grid.Column="0" Grid.Row="2" Click="btnOutFile_Click">Save File</Button>
+        <TextBox x:Name="tbOutFile" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="\\vmware-host\Shared Folders\Downloads\mcm9999_2022_07_10_03.xml" VerticalAlignment="Bottom" MinWidth="200"/>
+        <Button x:Name="btnProcess" Grid.Column="1" Grid.Row="3" Click="btnProcess_Click">Set Source Bitrates to Ignore</Button>
+        <RichTextBox x:Name="rtbStatus" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>
